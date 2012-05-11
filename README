@@ -1,0 +1,17 @@
+different length strings
+
+-> benchmark
+
+
+1. 50 byte strings
+-> continue until crashes
+-> print how many iterations
+-> how long
+
+2. 1000 byte strings
+-> continue until crash
+-> print how many iterations
+
+3. 1000000000000000 byte strings
+-> continue until crash
+-> print
