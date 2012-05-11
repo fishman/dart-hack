@@ -1,0 +1,23 @@
+# Copyright (c) 2012, the Dart project authors.  Please see the AUTHORS file
+# for details. All rights reserved. Use of this source code is governed by a
+# BSD-style license that can be found in the LICENSE file.
+
+[ $compiler == dart2js ]
+class_test: Fail
+statements_test: Fail
+typed_locals_test: Fail
+
+
+[ $mode == debug ]
+operator_test: Skip
+string_interpolation_test: Skip
+
+
+[ $compiler == frog || $runtime == drt ]
+*: Skip
+
+[ $compiler == dart2js && $runtime == none ]
+*: Fail, Pass # TODO(ahe): Triage these tests.
+
+[ $compiler == dartc || $runtime == vm ]
+cascade_precedence_test: Fail
