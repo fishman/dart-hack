@@ -57,7 +57,7 @@ Rope concatenate(final Rope left, final Rope right) {
 
 }
 
-int depth(final Rope r) {
+int Depth(final Rope r) {
   if (r is Rope) {
     return r.depth();
   } else {
@@ -66,7 +66,7 @@ int depth(final Rope r) {
 }
   
 bool isBalanced(final Rope r) {
-  final int dep = depth(r);
+  final int dep = Depth(r);
   if (dep >= FIBONACCI.length - 2)
     return false;
   return FIBONACCI[dep +2] <= r.length;
@@ -396,7 +396,7 @@ class ConcatenationRope extends AbstractRope {
   int _length;
   
   ConcatenationRope(this._left, this._right) {
-    this._depth = (Math.max(depth(this._left), depth(this._right)));
+    this._depth = (Math.max(Depth(this._left), Depth(this._right)));
   }
   
   
