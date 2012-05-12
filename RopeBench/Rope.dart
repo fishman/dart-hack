@@ -9,6 +9,11 @@ interface Rope {
    * A factory used for constructing ropes.
    */
   RopeBuilder BUILDER;
+
+  /**
+  * Return the length
+  */
+  int length();
   
   /**
    * Returns a new rope created by appending the specified character range to

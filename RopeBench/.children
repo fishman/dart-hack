@@ -1,8 +1,12 @@
-Rope.dart
 RopeBench.dart
 library/rope.dart
 FlatStringRope.dart
 library/rope2.dart
-AbstractRope.dart
-RopeBuilder.dart
+RupeIterableImpl.dart
 FlatRope.dart
+TestRupe.dart
+FlatCharSequenceRope.dart
+Rope.dart
+AbstractRope.dart
+ConcatenationRope.dart
+RopeBuilder.dart
