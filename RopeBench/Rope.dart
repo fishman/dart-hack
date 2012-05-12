@@ -1,4 +1,5 @@
 #library('Rope');
+
 #import('RopeBuilder.dart');
   
   
@@ -85,23 +86,12 @@ interface Rope {
    * Returns <code>true</code> if this rope matches the specified
    * <code>Pattern</code>, or <code>false</code> otherwise.
    * @see java.util.regex.Pattern
-   * @param regex the specified regular expression.
+   * @param regex the specified regular expression (Pattern or String type).
    * @return <code>true</code> if this rope matches the specified
    * <code>Pattern</code>, or <code>false</code> otherwise.
    */
-  bool matches(Pattern regex);
-  
-  /**
-   * Returns <code>true</code> if this rope matches the specified
-   * regular expression, or <code>false</code> otherwise.
-   * @see java.util.regex.Pattern
-   * @param regex the specified regular expression.
-   * @return <code>true</code> if this rope matches the specified
-   * regular expression, or <code>false</code> otherwise.
-   */
-  //bool matches(String regex);
-
- 
+  bool matches(var regex);
+   
   /**
    * Rebalances the current rope, returning the rebalanced rope. In general,
    * rope rebalancing is handled automatically, but this method is provided

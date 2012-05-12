@@ -1,3 +1,5 @@
 Rope.dart
 RopeBench.dart
+FlatStringRope.dart
 RopeBuilder.dart
+FlatRope.dart

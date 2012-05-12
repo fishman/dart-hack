@@ -1,6 +1,11 @@
 #library('Rope');
 
+#import('Rope.dart');
+#import('FlatStringRope.dart');
+
 class RopeBuilder {
   
-  RopeBuilder();
+  Rope build(String str) {
+    return new FlatStringRope(str); 
+  }
 }
