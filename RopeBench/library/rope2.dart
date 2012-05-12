@@ -399,6 +399,7 @@ class ConcatenationRope extends AbstractRope {
     this._depth = (Math.max(depth(this._left), depth(this._right)));
   }
   
+  
   int charCodeAt(final int index) {
     if (index < 0 || index >= this._length)
       throw new IndexOutOfRangeException(index);
@@ -440,7 +441,10 @@ class ConcatenationRope extends AbstractRope {
   Rope rebalance() {
     return Rebalance(this);
   }
-
+  
+  int depth(){
+    return _depth;
+  }
 
 //  void write(Writer out) throws IOException {
 //    left.write(out);
