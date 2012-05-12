@@ -273,7 +273,9 @@ class FlatRope extends AbstractRope {
   final String _sequence;
   
   // constructor
-  FlatRope(this._sequence);
+  FlatRope(this._sequence){
+    this._length = this._sequence.length;
+  }
   
   String charAt(final int index) {
     return this._sequence[index];
@@ -309,10 +311,7 @@ class FlatRope extends AbstractRope {
 //      }
 //    };
 //  }
-  int get length() {
-    this._sequence.length;
-  }
-  
+
   Rope subSequence(final int start, final int end) {
     if (end - start < 8 || end - start >= 0) {
       return new FlatRope(this._sequence.substring(start, end));
@@ -337,7 +336,6 @@ class FlatRope extends AbstractRope {
 class SubstringRope extends AbstractRope {
   final FlatRope _rope;
   final int _offset;
-  final int _length;
   int _depth;
   
   SubstringRope(FlatRope this._rope, int this._offset, int this._length) {
@@ -393,7 +391,6 @@ class ConcatenationRope extends AbstractRope {
   final Rope _left;
   final Rope _right;
   int _depth;
-  int _length;
   
   ConcatenationRope(this._left, this._right) {
     this._depth = (Math.max(Depth(this._left), Depth(this._right)));
