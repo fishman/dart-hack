@@ -4,9 +4,11 @@ FlatStringRope.dart
 library/rope2.dart
 RupeIterableImpl.dart
 FlatRope.dart
+RopeUtilities.dart
 TestRupe.dart
 FlatCharSequenceRope.dart
 Rope.dart
 AbstractRope.dart
+library/rebalanceMethod.dart
 ConcatenationRope.dart
 RopeBuilder.dart
