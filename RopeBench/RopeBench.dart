@@ -1,4 +1,5 @@
-#source('Rope.dart');
+#library('Rope');
+
 
 void main() {
   print("Hello World");
