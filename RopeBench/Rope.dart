@@ -22,6 +22,21 @@ interface Rope {
   //@ ensures \result.length() == (length() + (end-start));
   Rope append(String str, [int start, int end]);
   
+  
+  /**
+   * Creats a new rope by delete the specified character substring.
+   * The substring begins at the specified <code>start</code> and extends to
+   * the character at index <code>end - 1</code> or to the end of the
+   * sequence if no such character exists. If
+   * <code>start</code> is equal to <code>end</code>, no changes are made.
+   *
+   * @param      start  The beginning index, inclusive.
+   * @param      end    The ending index, exclusive.
+   * @return     This object.
+   * @throws     StringIndexOutOfBoundsException  if <code>start</code>
+   *             is negative, greater than <code>length()</code>, or
+   *       greater than <code>end</code>.
+   */
   //@ requires start <= end && start > -1 && end <= length();
   //@ ensures \result.length() == (length() - (end-start));
   Rope delete(int start, [int end]);
